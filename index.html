@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Website</title>
+  <style>
+    /* Reset */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+
+    /* Background */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Arial, sans-serif;
+      color: white;
+      background: #0b1020;
+      overflow: hidden;
+    }
+
+    .bg {
+      position: fixed;
+      inset: 0;
+      background: url("bg.gif") center / cover no-repeat;
+      transform: scale(1.03);
+      filter: blur(2px) saturate(1.15) brightness(0.85);
+    }
+
+    /* Dark overlay + subtle gradient */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(800px 400px at 70% 20%, rgba(120,160,255,.25), transparent 60%),
+        radial-gradient(900px 500px at 20% 80%, rgba(120,255,220,.16), transparent 60%),
+        rgba(0,0,0,.55);
+    }
+
+    /* Main card */
+    .wrap {
+      position: relative;
+      height: 100%;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .card {
+      width: min(520px, 92vw);
+      padding: 28px 24px;
+      border-radius: 20px;
+      background: rgba(20, 24, 40, 0.55);
+      border: 1px solid rgba(255,255,255,0.12);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+      text-align: center;
+    }
+
+    .title {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      opacity: 0.85;
+      line-height: 1.4;
+      margin-bottom: 18px;
+      font-size: 14px;
+    }
+
+    /* Button */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 14px 16px;
+      border-radius: 14px;
+      text-decoration: none;
+      color: white;
+      font-weight: 700;
+      font-size: 16px;
+      background: linear-gradient(90deg, rgba(120,160,255,0.95), rgba(120,255,220,0.85));
+      box-shadow: 0 10px 30px rgba(120,160,255,0.25);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+      box-shadow: 0 14px 40px rgba(120,255,220,0.22);
+    }
+
+    .btn:active {
+      transform: translateY(0px);
+      box-shadow: 0 10px 30px rgba(120,160,255,0.22);
+    }
+
+    .pillrow {
+      margin-top: 16px;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .pill {
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      font-size: 12px;
+      opacity: 0.9;
+    }
+
+    .footer {
+      margin-top: 14px;
+      opacity: 0.6;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <div class="overlay" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <main class="card">
+      <div class="title">Eli’s Website</div>
+    
+
+      <a class="btn" href="https://guns.lol/f4keeli" target="_blank" rel="noopener noreferrer">
+        🔗 Visit my link
+      </a>
+
+      <div class="pillrow">
+        <div class="pill">✨ Glass effect</div>
+        <div class="pill">🌙 Dark aesthetic</div>
+        <div class="pill">⚡ Smooth hover</div>
+      </div>
+
+      <div class="footer">Tip: Check out my Guns.lol.</div>
+    </main>
+  </div>
+</body>
+</html>
